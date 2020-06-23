@@ -10,7 +10,7 @@ def generateHash(platform, configFile = 'config.json'):
         if (length < 5 or length > 64):
             raise ValueError("Invalid length")
 
-    raw = secret["str1"] + " " + str(sys.argv[1]) + " " + secret["str2"] + " " + str(length)
+    raw = secret["str1"] + " " + str(sys.argv[1]).lower() + " " + secret["str2"] + " " + str(length)
     hash = sha256(raw.encode('utf-8')).hexdigest()
     chopped = hash[:length]
 
