@@ -26,12 +26,11 @@ def capitaliseAndSpecialChar(hash, specialChar = '!'):
     hash[-1] = specialChar
     return ''.join(hash)
 
+if __name__ == "__main__":
+    n = len(sys.argv) 
+    if n != 2:
+        raise ValueError("Invalid arguments")
 
-
-n = len(sys.argv) 
-if n != 2:
-    raise ValueError("Invalid arguments")
-
-hash = generateHash(sys.argv[1])
-password = capitaliseAndSpecialChar(hash)
-print(password)
+    hash = generateHash(sys.argv[1])
+    password = capitaliseAndSpecialChar(hash)
+    print(password)
