@@ -31,7 +31,8 @@ def getPassword(platform, secretString, length):
 
 if __name__ == "__main__":
     
-    parser = argparse.ArgumentParser(description='Generate Password: Personal multi-platform password generation scheme')
+    parser = argparse.ArgumentParser(description='Generate Password: Personal multi-platform password generation scheme',
+                                    epilog='To get more help, raise an issue at https://github.com/anirudhajith/gp')
     parser.add_argument('platform', type=str, help='name of platform for which password should be generated', nargs='?', metavar='PLATFORM')
     parser.add_argument('--list', type=str, help='path to file containing all platforms', metavar='PATH')
     parser.add_argument('--length', type=int, help='required length of generated password', metavar='LENGTH')
