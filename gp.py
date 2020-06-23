@@ -60,8 +60,8 @@ if __name__ == "__main__":
     else: 
         with open(args.list) as f:
             platforms = f.readlines()
-            platforms = [platform.rstrip().lower() for platform in platforms]
-            platforms = [platform for platform in platforms if platform]
+            platforms = map(lambda x: x.strip().lower(), platforms)
+            platforms = filter(lambda x: x, platforms)
         
         secretString = getpass.getpass(prompt='Enter your secret string: ')
         print()
