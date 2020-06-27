@@ -30,6 +30,6 @@ python3 gp.py --list FILE
 
 You will be asked to provide your secret string in each of these cases. 
 
-**Do not divulge your secret string to anyone. If you do, a person with knowledge of the scheme can recover all of your passwords.**
+**Do not divulge your secret string to anyone. If you do, a person with knowledge of the scheme can recover all of your passwords. This system relies on the strength of your secret string. CHOOSE A STRONG SECRET STRING.**
 
 It is recommended that you use a password manager in addition to this scheme since the generated passwords may be difficult to remember.
